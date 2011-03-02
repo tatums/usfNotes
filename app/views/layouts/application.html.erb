@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> 
+  <title>Notes</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :all %>
+  <%= csrf_meta_tag %>
+
+<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
+
+</head>
+<body>
+	
+<div id="page">		
+	<div id="header">
+		<div class="navigation">
+			<ul>
+				<li><%= link_to 'Notes', notes_path %></li>
+				<li><%= link_to 'Calendar', calendar_path %></li>
+			</ul>		
+		</div>
+	</div>
+	<div id="content_body">
+		<%= yield %>
+    </div>		
+	<!--
+	<div id="footer">
+		<p>Footer Stuff</p>
+	</div>	
+	-->
+</div><!--#page -->
+</body>
+</html>

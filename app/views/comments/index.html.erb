@@ -1,0 +1,8 @@
+<ul id="comments">
+	<% @comments.each do |comment| %>
+		<li class="comment">
+			<span class="date"><%=comment.created_at.to_s(:long)%></span>
+			<p><%= comment.preview.html_safe %><%=link_to "...(read more)", comment %></p>
+		</li>
+	<% end %>
+</ul>

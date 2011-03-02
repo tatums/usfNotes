@@ -1,0 +1,14 @@
+<div class="column grid_3 index_side">
+	<%= link_to 'New Project', new_note_path %>
+</div>
+
+<div class="column grid_9 index_body">
+<ul>
+	<% @notes.each do |note| %>
+	  <li>
+		<h2><%=link_to note.title, note %></h2>
+		<p> <%= note.description %>	</p>
+	  </li>
+	<% end %>
+</ul>	
+</div>

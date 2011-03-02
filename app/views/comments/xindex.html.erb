@@ -1,0 +1,8 @@
+<ul id="comments">
+	<% @comments.each do |comment| %>
+		<li class="comment">
+			<span class="date"><%=comment.created_at.to_s(:long)%></span>
+			<p><%= truncate(comment.body, :length => 10,:separator => ' ', :omission => "... (#{link_to "read more", comment})").html_safe %>
+		</li>
+	<% end %>
+</ul>

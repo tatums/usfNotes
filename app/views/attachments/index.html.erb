@@ -1,0 +1,10 @@
+<ul>
+<% @attachments.each do |attachment| %>
+    <li>
+		<span><%= link_to attachment.title, attachment %></span>
+		<%= link_to 'download', attachment.phile.url %>
+	</li>
+<% end %>
+</ul>
+
+

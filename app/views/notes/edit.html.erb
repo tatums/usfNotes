@@ -1,0 +1,7 @@
+<div class="column grid_2">
+	<h3><%= link_to "Editing #{@note.title}", @note %></h3>
+	<%= link_to 'Delete', @note, :confirm => 'Are you Sure?', :method => :delete %>	
+</div>
+<div class="column grid_10">
+	<%= render 'form' %>
+</div>

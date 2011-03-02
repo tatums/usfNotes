@@ -1,0 +1,24 @@
+<%= display_notice_when_needed %>
+
+<div class="column grid_3 show_side">
+	<h3>Viewing <%=link_to @event.note.title, @event.note %> Event</h3>
+	<p>
+		<%= link_to 'Edit', edit_event_path(@event) %> |
+		<%= link_to 'Delete', @event, :confirm => 'Are you sure?', :method => :delete %>
+	</p>	
+</div>
+<div class="column grid_9 show_body">
+	<p>
+	  <b>Day:</b>
+	  <%= @event.name %>
+	</p>
+
+		<p>
+		  <b>Day:</b>
+		  <%= @event.start_at %>
+		</p>
+		<p>
+		  <b>Description:</b>
+		  <%= @event.description %>
+		</p>
+</div>

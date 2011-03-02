@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  day: 2011-02-21
+  note_id: 1
+  description: MyText
+
+two:
+  day: 2011-02-21
+  note_id: 1
+  description: MyText

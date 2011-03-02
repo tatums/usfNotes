@@ -1,0 +1,20 @@
+<%= display_notice_when_needed %>
+
+<div class="column grid_3 show_side">
+	<h3><%= link_to @attachment.note.title, @attachment.note %></h3>
+	<p>
+		<%= link_to 'Edit', edit_attachment_path(@attachment) %> |
+		<%= link_to 'Delete', @attachment, :confirm => 'Are you sure?', :method => :delete %>
+	</p>	
+</div>
+
+<div class="column grid_9 show_body">
+	<p><%=link_to @attachment.phile_file_name, @attachment.phile.url %> | 
+		<%= number_to_human_size(@attachment.phile_file_size) %> | 
+		<em>Uploaded on:</em> <%= @attachment.phile_updated_at.to_s(:long) %>
+	</p>
+	<p>
+	  <%= link_to 'Download File', @attachment.phile.url %>
+	</p>
+	   
+</div>

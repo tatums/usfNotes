@@ -1,0 +1,16 @@
+<%= display_notice_when_needed %>
+
+<div class="column grid_3 show_side">
+	<h2><%= link_to @comment.note.title, @comment.note %></h2>
+	<p>
+		<%= link_to 'Edit', edit_comment_path(@comment) %> |
+		<%= link_to 'Delete', @comment, :confirm => 'Are you sure?', :method => :delete %>
+	</p>	
+</div>
+
+<div class="column grid_9 show_body">
+	<p>
+	  <b>Body:</b>
+	  <%= @comment.body.html_safe %>
+	</p>	
+</div>
